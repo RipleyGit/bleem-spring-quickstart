@@ -23,6 +23,7 @@ public class MyWsHandler extends AbstractWebSocketHandler {
     private static Map<String,SessionBean> sessionBeanMap ;
     private static AtomicInteger clientIdMaker;
     private static StringBuffer stringBuffer;
+
     static {
         sessionBeanMap = new ConcurrentHashMap<>();
         clientIdMaker = new AtomicInteger(0);
