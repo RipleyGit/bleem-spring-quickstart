@@ -1,7 +1,0 @@
-server:
-  port: 9002
-
-
-spring:
-  application:
-    name: eureka-hazelcast-2
