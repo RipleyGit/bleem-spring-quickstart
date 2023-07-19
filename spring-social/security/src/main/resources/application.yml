@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+#security:
+#  basic:
+#    enabled: false # 关闭security 验证
+#
+# todo 配置密码没有生效？
+#spring:
+#  security:
+#    user:
+#      name: admin
+#      password: admin@123
+#spring.security.user.name: admin
+#spring.security.user.password: 111111
+spring:
+  security:
+    user:
+      name: configUser
+      password: configPassword
