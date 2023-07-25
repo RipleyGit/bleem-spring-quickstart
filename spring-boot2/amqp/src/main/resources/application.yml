@@ -1,0 +1,25 @@
+server:
+  port: 9901
+
+spring:
+  rabbitmq:
+    host: 172.21.34.104
+    port: 5672
+    username: admin
+    password: bestway123
+    virtual: /
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 20
+        prefetch: 5
+
+
+
+# Rabbit MQ
+rabbitmq:
+  bleemRibbit:
+    enable: true
+    exchange: bleem_ribbit_ex
+    routingKey: bleem_ribbit_route
+    queueKey: bleem_ribbit_queue

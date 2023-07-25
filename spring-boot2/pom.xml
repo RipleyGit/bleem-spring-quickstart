@@ -42,6 +42,9 @@
         <module>shedlock</module>
         <module>websocket</module>
         <module>web</module>
+        <module>disruptor</module>
+        <module>amqp</module>
+        <module>aop</module>
     </modules>
 
     <build>
