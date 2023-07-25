@@ -5,7 +5,7 @@ spring:
     nacos:
       discovery:
         # 开发Nacos
-        server-addr: 172.21.34.104:8848
+        server-addr: dev.brd.bleem.site:8848
         namespace: 3861d441-f4e8-46de-9782-d53e55a934cb #dd33af9e-210f-4745-a5be-62d47fda9e93
       username: nacos
       password: bestway123!@#
