@@ -1,9 +1,0 @@
-server:
-  port: 9528
-spring:
-  application:
-    name: nacos-fegin
-  cloud:
-    nacos:
-      discovery:
-        server-addr: nacos.server:8848
