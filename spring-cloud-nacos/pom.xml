@@ -58,5 +58,6 @@
 
     <modules>
         <module>hello-world</module>
+        <module>nacos-feign</module>
     </modules>
 </project>
