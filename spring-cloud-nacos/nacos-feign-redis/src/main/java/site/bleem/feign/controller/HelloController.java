@@ -42,14 +42,13 @@ public class HelloController {
         key.put("equipType", 270);
         key.put("port", 10005);
         key.put("ip", "172.22.6.73");
-        List<JSONObject> equipKeyList = Arrays.asList(key);
         JSONObject dto = new JSONObject();
         dto.put("uuid", UuidUtils.generateUuid());
         dto.put("functionType", 3);
-        dto.put("equipKeyList", equipKeyList);
+        dto.put("dto", key);
         dto.put("cycleCount", 1);
         dto.put("infoContent", content);
-        ResponseEntity responseEntity = brdDataFeignClient.settingEquipInfoPlayOrder(dto);
+        Object responseEntity = brdDataFeignClient.syncSettingEquipInfoPlayOrder(dto);
         while (true) {
             Map<String, Object> map = redisService.hmGet("pp_broad:register_equip_status_map");
             JSONObject parse = JSONObject.parseObject(JSONObject.toJSONString(map.get("12345687")));
@@ -58,7 +57,7 @@ public class HelloController {
             System.out.println("当前设备状态："+status.getDesc());
             if (status == WorkStatus.FRR){
                 dto.put("infoContent", "播放结束");
-                brdDataFeignClient.settingEquipInfoPlayOrder(dto);
+                brdDataFeignClient.syncSettingEquipInfoPlayOrder(dto);
                 break;
             }
         }

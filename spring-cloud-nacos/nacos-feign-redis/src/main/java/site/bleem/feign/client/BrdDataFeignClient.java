@@ -19,6 +19,8 @@ import java.util.List;
 public interface BrdDataFeignClient {
 
     @PostMapping(value = "/setEquip/setInfoPlayOrder")
-    ResponseEntity settingEquipInfoPlayOrder(@RequestBody @Validated JSONObject paramVo) throws Exception;
+    Object settingEquipInfoPlayOrder(@RequestBody @Validated Object paramVo) throws Exception;
+    @PostMapping(value = "/setEquip/sync/setInfoPlayOrder")
+    Object syncSettingEquipInfoPlayOrder(@RequestBody @Validated Object dto);
 
 }
