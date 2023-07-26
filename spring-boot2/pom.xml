@@ -18,15 +18,17 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>2.4.13</spring-boot.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
+
         <dependencies>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -42,6 +44,7 @@
         <module>shedlock</module>
         <module>websocket</module>
         <module>web</module>
+        <module>web-async</module>
         <module>disruptor</module>
         <module>amqp</module>
         <module>aop</module>
