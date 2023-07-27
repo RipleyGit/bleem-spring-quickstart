@@ -36,18 +36,19 @@
     </dependencyManagement>
 
     <modules>
-        <module>hazelcast</module>
+        <module>boot-hazelcast</module>
         <module>batch</module>
-        <module>elasticsearch</module>
+        <module>boot-elasticsearch</module>
         <module>jdbc-phoenix</module>
-        <module>swagger2</module>
-        <module>shedlock</module>
-        <module>websocket</module>
-        <module>web</module>
+        <module>boot-swagger2</module>
+        <module>boot-shedlock</module>
+        <module>boot-websocket</module>
+        <module>boot-web</module>
         <module>web-async</module>
-        <module>disruptor</module>
-        <module>amqp</module>
-        <module>aop</module>
+        <module>boot-disruptor</module>
+        <module>boot-amqp</module>
+        <module>boot-aop</module>
+        <module>boot-conditional</module>
     </modules>
 
     <build>
