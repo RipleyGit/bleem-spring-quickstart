@@ -3,11 +3,14 @@ server:
 
 spring:
   application:
-    name: boot-kafka
-  kafka:
-    ###########【Kafka集群】###########
-    bootstrap-servers: 172.21.34.104:9092
-    producer:
-    # 重试次数
-kafka:
-  enable: true
+    name: boot-socket
+
+standard-connect:
+  tcp:
+    enable: true
+    bindPorts:
+      - 7700
+  udp:
+    enable: true
+    bindPorts:
+      - 10005
