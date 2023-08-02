@@ -49,6 +49,10 @@
         <module>boot-amqp</module>
         <module>boot-aop</module>
         <module>boot-conditional</module>
+        <module>boot-kafka</module>
+        <module>boot-socket</module>
+        <module>boot-thread</module>
+        <module>boot-event</module>
     </modules>
 
     <build>

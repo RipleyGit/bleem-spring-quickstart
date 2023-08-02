@@ -1,0 +1,13 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: boot-kafka
+  kafka:
+    ###########【Kafka集群】###########
+    bootstrap-servers: 172.21.34.104:9092
+    producer:
+    # 重试次数
+kafka:
+  enable: true

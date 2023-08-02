@@ -1,0 +1,145 @@
+<mxfile host="localhost" modified="2023-08-01T05:07:51.637Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) yank.note/3.56.4 Chrome/108.0.5359.215 Electron/22.3.17 Safari/537.36" etag="iHNthGKc1wsXCfJYgqRb" version="21.5.1" type="embed" pages="2">
+  <diagram id="inMPcjYvnmvmxzhDKLPN" name="services">
+    <mxGraphModel dx="2049" dy="1243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="日志记录" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7">
+          <mxGeometry x="0.4091" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="500" />
+              <mxPoint x="460" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="消息通知" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9">
+          <mxGeometry x="0.6994" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="500" />
+              <mxPoint x="460" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="其他操作" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="11">
+          <mxGeometry x="0.7009" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2" value="UserService" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="254" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="修改密码" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4">
+          <mxGeometry x="0.2105" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="470" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="LogService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="MessageService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="xxxService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="615" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2PZiD6RrkovjuIsK1oKV" name="event">
+    <mxGraphModel dx="3187" dy="1933" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vYHZtp1ta6bGkPGBpD8e-7" target="vYHZtp1ta6bGkPGBpD8e-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-2" value="监听到事件：日志记录" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vYHZtp1ta6bGkPGBpD8e-1">
+          <mxGeometry x="0.4091" relative="1" as="geometry">
+            <mxPoint x="-34" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vYHZtp1ta6bGkPGBpD8e-7" target="vYHZtp1ta6bGkPGBpD8e-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="586" y="590" />
+              <mxPoint x="586" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-4" value="监听到事件：消息通知" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vYHZtp1ta6bGkPGBpD8e-3">
+          <mxGeometry x="0.6994" y="1" relative="1" as="geometry">
+            <mxPoint x="-37" y="61" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vYHZtp1ta6bGkPGBpD8e-7" target="vYHZtp1ta6bGkPGBpD8e-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="586" y="590" />
+              <mxPoint x="586" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-6" value="监听到事件：其他操作" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vYHZtp1ta6bGkPGBpD8e-5">
+          <mxGeometry x="0.7009" relative="1" as="geometry">
+            <mxPoint x="-38" y="-45" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-7" value="UserChangePassword" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vYHZtp1ta6bGkPGBpD8e-10" target="vYHZtp1ta6bGkPGBpD8e-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-9" value="修改密码" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vYHZtp1ta6bGkPGBpD8e-8">
+          <mxGeometry x="0.2105" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-10" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="560" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-11" value="LogService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="676" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-12" value="MessageService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="676" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-13" value="xxxService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="676" y="705" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vYHZtp1ta6bGkPGBpD8e-16" target="vYHZtp1ta6bGkPGBpD8e-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-15" value="发布密码修改事件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vYHZtp1ta6bGkPGBpD8e-14">
+          <mxGeometry x="-0.0071" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vYHZtp1ta6bGkPGBpD8e-16" value="UserService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
