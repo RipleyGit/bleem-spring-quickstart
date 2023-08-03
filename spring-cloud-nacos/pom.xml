@@ -60,5 +60,6 @@
         <module>hello-world</module>
         <module>nacos-feign</module>
         <module>nacos-feign-redis</module>
+        <module>nacos-redis</module>
     </modules>
 </project>
