@@ -1,4 +1,4 @@
-package site.bleem.amqp.rabbit;
+package site.bleem.amqp.config;
 
 import lombok.Data;
 import org.slf4j.Logger;
@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Configuration;
     prefix = "rabbitmq"
 )
 public class RabbitMqConfig {
+
     private static final Logger log = LoggerFactory.getLogger(RabbitMqConfig.class);
 
     private RabbitProperties bleemRibbit;

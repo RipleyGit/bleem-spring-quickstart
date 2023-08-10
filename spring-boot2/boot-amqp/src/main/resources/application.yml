@@ -3,7 +3,7 @@ server:
 
 spring:
   rabbitmq:
-    host: 172.21.34.104
+    host: dev.brd.bleem.site
     port: 5672
     username: admin
     password: bestway123

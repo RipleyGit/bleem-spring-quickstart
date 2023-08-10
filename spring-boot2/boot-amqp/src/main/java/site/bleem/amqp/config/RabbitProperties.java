@@ -1,4 +1,4 @@
-package site.bleem.amqp.rabbit;
+package site.bleem.amqp.config;
 
 import lombok.Data;
 
