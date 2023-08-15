@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import site.bleem.feign.client.BrdDataFeignClient;
+import site.bleem.feign.client.CppLinkEquipFeignServer;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -42,6 +43,26 @@ public class HelloController {
         dto.put("cycleCount",1);
         dto.put("infoContent",content);
         ResponseEntity responseEntity = brdDataFeignClient.settingEquipInfoPlayOrder(dto);
+        return ResponseEntity.ok("world!");
+    }
+
+    @Resource
+    private CppLinkEquipFeignServer cppLinkEquipFeignServer;
+    @GetMapping("/do/{content}")
+    public ResponseEntity<String> doController(@PathVariable("content") @Validated String content) throws Exception {
+        JSONObject key = new JSONObject();
+        key.put("deviceType","camera_NVR");
+        key.put("company","HLK");
+        key.put("port",8000);
+        key.put("ip","172.22.7.120");
+        key.put("channel",5);
+        key.put("usrname","admin");
+        key.put("passwd","root1234");
+        JSONObject dto = new JSONObject();
+        dto.put("open", 1);
+        dto.put("duration",3);
+        dto.put("deviceInfo",key);
+        cppLinkEquipFeignServer.doControl(dto);
         return ResponseEntity.ok("world!");
     }
 }
