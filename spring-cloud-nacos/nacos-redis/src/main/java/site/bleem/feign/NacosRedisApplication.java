@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class NacosRedisApplication {
 
     public static void main(String[] args) {
+        System.out.println(""+Runtime.getRuntime().availableProcessors());
         SpringApplication.run(NacosRedisApplication.class, args);
     }
-
 }

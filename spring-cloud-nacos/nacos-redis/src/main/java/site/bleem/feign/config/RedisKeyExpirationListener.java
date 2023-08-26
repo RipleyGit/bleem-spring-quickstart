@@ -28,18 +28,15 @@ public class RedisKeyExpirationListener extends KeyExpirationEventMessageListene
         super(listenerContainer);
     }
 
-    public DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-    
     @Autowired
     private RedisTemplate<String,Object> redisTemplate;
 
 
     @Override
     public void onMessage(Message message, byte[] pattern) {
-      // 获取过期的key
-        String body = new String(message.getBody());
+      // 获取过期的keyString body = new String(message.getBody());
         String keyName = new String(message.getChannel());
-        System.out.printf("body"+body+"key"+keyName);
+        System.out.printf("body"+"key"+keyName);
 
 //        // 对过期的key进行分割，获取过期时间
 //        LocalDateTime parse = LocalDateTime.parse(keyName.split("@")[1], dateTimeFormatter);
