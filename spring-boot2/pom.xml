@@ -53,6 +53,7 @@
         <module>boot-event</module>
         <module>boot-thread</module>
         <module>boot-mapstruct</module>
+        <module>boot-vue</module>
     </modules>
 
     <build>
