@@ -12,14 +12,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>2.4.13</spring-boot.version>
-        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -39,7 +38,7 @@
         <module>boot-hazelcast</module>
         <module>batch</module>
         <module>boot-elasticsearch</module>
-        <module>jdbc-phoenix</module>
+<!--        <module>jdbc-phoenix</module>-->
         <module>boot-swagger2</module>
         <module>boot-shedlock</module>
         <module>boot-websocket</module>
@@ -51,8 +50,9 @@
         <module>boot-conditional</module>
         <module>boot-kafka</module>
         <module>boot-socket</module>
-        <module>boot-thread</module>
         <module>boot-event</module>
+        <module>boot-thread</module>
+        <module>boot-mapstruct</module>
     </modules>
 
     <build>
@@ -63,5 +63,21 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>TestWebApp_Repository</id>
+            <name>TestWebApp Applications Repository Internal</name>
+            <url>file://C:/Users/user/.m2/repository</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>TestWebApp_Repository</id>
+            <name>TestWebApp Applications Repository Internal</name>
+            <url>file://C:/Users/user/.m2/repository</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

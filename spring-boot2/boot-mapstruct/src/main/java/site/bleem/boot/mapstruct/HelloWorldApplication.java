@@ -1,4 +1,4 @@
-package site.bleem.boot.hazelcast;
+package site.bleem.boot.mapstruct;
 
 
 import org.springframework.boot.SpringApplication;
