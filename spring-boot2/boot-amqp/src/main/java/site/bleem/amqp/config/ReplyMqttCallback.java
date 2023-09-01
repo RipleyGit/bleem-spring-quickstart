@@ -3,6 +3,7 @@ package site.bleem.amqp.config;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.springframework.stereotype.Component;
 
@@ -32,11 +33,13 @@ public class ReplyMqttCallback implements MqttCallback {
      */
     @Override
     public void connectionLost(Throwable throwable) {
-        log.info("连接断开，可以做重连");
-//        if (!mqttConfig.isSubscribeConnected()) {
-//            log.info("MqttClient Subscribe ReConnect....");
-//            mqttConfig.mqttSubscribeConnect();
-//        }
+        log.warn("MQTT连接断开，尝试重连",throwable);
+        try {
+            mqttConfig.reConnect();
+        } catch (MqttException e) {
+            log.warn("MQTT重连失败",e);
+            throw new RuntimeException(e);
+        }
     }
 
 

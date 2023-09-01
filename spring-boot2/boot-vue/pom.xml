@@ -80,24 +80,26 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>exec-npm-install</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <workingDirectory>./vue</workingDirectory>
-                            <executable>npm</executable>
-                            <arguments>
-                                <argument>install</argument>
-                                <argument>run</argument>
-                                <argument>build</argument>
-<!--                                <argument>run build</argument>-->
-                            </arguments>
-                        </configuration>
                         <goals>
                             <goal>exec</goal>
                         </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <!-- 可选：设置工作目录 -->
+                            <workingDirectory>./vue</workingDirectory>
+                            <!-- 指定要执行的命令 -->
+                            <executable>npm</executable>
+                            <!-- 命令参数 -->
+                            <arguments>
+<!--                                <argument>install</argument>-->
+                                <argument>run</argument>
+                                <argument>build</argument>
+                            </arguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
