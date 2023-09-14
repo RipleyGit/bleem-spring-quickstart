@@ -12,7 +12,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.0.RELEASE</version>
-<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -50,9 +50,8 @@
         <module>boot-conditional</module>
         <module>boot-kafka</module>
         <module>boot-socket</module>
-        <module>boot-event</module>
         <module>boot-thread</module>
-        <module>boot-mapstruct</module>
+        <module>boot-event</module>
     </modules>
 
     <build>

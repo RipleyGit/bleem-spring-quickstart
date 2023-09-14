@@ -13,8 +13,17 @@ spring:
         concurrency: 10
         max-concurrency: 20
         prefetch: 5
-
-
+  mqtt:
+    host: tcp://172.22.1.136:1883
+    username: admin
+    password: root1234
+    openFlag: open
+    qos: 1
+    connectionTimeout: 10
+    keepAliveInterval: 10
+    videoTimeOut: 5
+    topic-prefix: /vehicle/
+    client-id: ai
 
 # Rabbit MQ
 rabbitmq:
