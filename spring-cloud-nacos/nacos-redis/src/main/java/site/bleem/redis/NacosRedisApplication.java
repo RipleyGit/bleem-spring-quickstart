@@ -1,4 +1,4 @@
-package site.bleem.feign;
+package site.bleem.redis;
 
 
 import org.springframework.boot.SpringApplication;

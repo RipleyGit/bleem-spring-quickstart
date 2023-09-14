@@ -2,8 +2,14 @@ spring:
   redis:
     password: bestway@123
     host: dev.brd.bleem.site
-    database: 2
+    port: 6379
+    database: 4
     notify-keyspace-events: Ex
+    connect-timeout: 1000
+
+
+
+
   application:
     name: hello-world
   cloud:

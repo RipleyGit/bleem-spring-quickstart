@@ -1,4 +1,4 @@
-package site.bleem.feign.controller;
+package site.bleem.redis.controller;
 
 
 import org.springframework.http.ResponseEntity;
@@ -6,8 +6,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import site.bleem.feign.config.RedissonDelayQueue;
-import site.bleem.feign.service.RedisService;
+import site.bleem.redis.config.RedissonDelayQueue;
+import site.bleem.redis.service.RedisService;
 
 import javax.annotation.Resource;
 
