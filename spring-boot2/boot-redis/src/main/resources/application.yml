@@ -1,0 +1,13 @@
+server.port: 8096
+
+spring:
+  application:
+    name: bleem-redis
+  redis:
+    password: bestway@123
+    host: dev.brd.bleem.site
+    port: 6379
+    database: 4
+    notify-keyspace-events: Ex
+    connect-timeout: 1000
+
