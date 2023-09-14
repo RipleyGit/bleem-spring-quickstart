@@ -11,12 +11,6 @@ import org.springframework.context.ApplicationEventPublisher;
 @SpringBootApplication
 public class EventApplication implements CommandLineRunner {
 
-    @Autowired
-    private ApplicationContext applicationContext;
-
-    @Autowired
-    private ApplicationEventPublisher appEventPublisher;
-
     public static void main(String[] args) {
 
         new SpringApplicationBuilder(EventApplication.class)

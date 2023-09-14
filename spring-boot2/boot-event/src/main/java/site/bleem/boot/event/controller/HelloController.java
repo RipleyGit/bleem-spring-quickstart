@@ -24,7 +24,7 @@ public class HelloController {
     @Autowired
     private ApplicationEventPublisher appEventPublisher;
 
-    @GetMapping("/hello/${world}")
+    @GetMapping("/hello/{world}")
     public ResponseEntity<String> returnWorld(@PathVariable("world") String world) {
 
         applicationContext.publishEvent(new UserChangePasswordEvent(world));
