@@ -17,12 +17,12 @@ public class OnMissingBean {
         System.out.println("===================OnMissingBean==============================");
     }
 
-    @Bean
-    @ConditionalOnMissingBean(BeanService.class)
-    public BeanService missOnProperty(){
-        System.out.println("===================ConditionalOnMissingBean==============================");
-        return new BeanService();
-    }
+//    @Bean
+//    @ConditionalOnMissingBean(BeanService.class)
+//    public BeanService missOnProperty(){
+//        System.out.println("===================ConditionalOnMissingBean==============================");
+//        return new BeanService();
+//    }
 
 
 }

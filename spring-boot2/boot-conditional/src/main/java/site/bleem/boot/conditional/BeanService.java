@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * @desc todo
  * @date 2023/7/27
  */
-@Service
+//@Service
 public class BeanService {
 
     public BeanService(){
