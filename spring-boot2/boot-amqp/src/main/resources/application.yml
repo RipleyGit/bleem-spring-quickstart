@@ -14,7 +14,7 @@ spring:
         max-concurrency: 20
         prefetch: 5
   mqtt:
-    host: tcp://172.22.1.136:1883
+    host: tcp://172.23.57.90:1883
     username: admin
     password: root1234
     openFlag: open

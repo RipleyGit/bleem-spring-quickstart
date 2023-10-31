@@ -1,4 +1,4 @@
-package site.bleem.amqp.config;
+package site.bleem.mqtt;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
