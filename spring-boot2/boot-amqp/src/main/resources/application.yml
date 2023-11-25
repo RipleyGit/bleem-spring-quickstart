@@ -23,7 +23,7 @@ spring:
     keepAliveInterval: 10
     videoTimeOut: 5
     topic-prefix: /vehicle/
-    client-id: ai
+    client-id: xxxx
 
 # Rabbit MQ
 rabbitmq:
