@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import site.bleem.boot.web.controller.dto.QuestionXlxsDTO;
 import site.bleem.boot.web.service.ExcelService;
 
 import javax.annotation.Resource;
@@ -34,26 +35,23 @@ public class ExcelController {
 
 
     /**
-     * 课程附件上传
+     * 试题导入
      *
-     * @param courseFile
-     * @return
+     * @param xlsxFile
+     * @param courseId
+     * @param questionType
      */
     @PostMapping(value = "/upload/xlsx", consumes = {"multipart/form-data"})
-    public void uploadXlsx(MultipartFile courseFile) {
+    public void uploadXlsx(@RequestParam("xlsxFile") MultipartFile xlsxFile, @RequestParam("courseId") Integer courseId, @RequestParam("questionType") Integer questionType) {
         //基础校验
-        if (courseFile == null || courseFile.isEmpty() || courseFile.getSize() == 0) {
+        if (xlsxFile == null || xlsxFile.isEmpty() || xlsxFile.getSize() == 0) {
             throw new RuntimeException("文件不能为空！");
         }
-        String originalFilename = courseFile.getOriginalFilename();
+        String originalFilename = xlsxFile.getOriginalFilename();
         if (originalFilename == null) {
             throw new RuntimeException("文件名称不能为空！");
         }
-        String[] split = originalFilename.split("\\.");
-        String fileSuffix = split[split.length - 1];
-        if (!"xlsx".equals(fileSuffix)) {
-            throw new RuntimeException("仅支持上传pdf和MP4格式文件！");
-        }
+        excelService.uploadXlsx(xlsxFile, courseId, questionType);
     }
 
     @PostMapping("/export/xlsx")
@@ -96,6 +94,7 @@ public class ExcelController {
             response.getWriter().println(JSON.toJSONString(map));
         }
     }
+
     // 获取内容单元格样式，包括边框
     private WriteCellStyle getContentCellStyle(Workbook workbook) {
         WriteCellStyle contentCellStyle = new WriteCellStyle();
