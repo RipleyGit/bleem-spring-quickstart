@@ -34,6 +34,7 @@ public class RedisController {
         System.out.println("当前时间："+ currentTimeMillis);
         return ResponseEntity.ok(key);
     }
+
     @GetMapping("/queue/{key}/{time}")
     public ResponseEntity<String> queue(@PathVariable("key") @Validated String key,@PathVariable("time") @Validated Integer time) throws Exception {
         redissonDelayQueue.offerTask(key,time);

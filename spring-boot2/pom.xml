@@ -40,6 +40,7 @@
         <module>boot-elasticsearch</module>
 <!--        <module>jdbc-phoenix</module>-->
         <module>boot-swagger2</module>
+        <module>boot-redis</module>
         <module>boot-shedlock</module>
         <module>boot-websocket</module>
         <module>boot-web</module>
@@ -52,6 +53,7 @@
         <module>boot-socket</module>
         <module>boot-thread</module>
         <module>boot-event</module>
+        <module>boot-security</module>
     </modules>
 
     <build>

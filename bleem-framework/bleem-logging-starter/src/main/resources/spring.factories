@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  site.bleem.common.logging.init.ApplicationLoggerInitializer

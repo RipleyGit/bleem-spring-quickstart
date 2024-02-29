@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  site.bleem.common.security.service.UserDetailsServiceImpl,\
+  site.bleem.common.security.service.ClientDetailsService,\
+  site.bleem.common.security.component.SecurityInnerAspect
