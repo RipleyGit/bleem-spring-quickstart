@@ -1,9 +1,0 @@
-{
-  "interfaceOnly": true,
-  "library": "spring-boot",
-  "modelPackage": "cn.com.bsfit.optimizer.mgr.controller.api.dto",
-  "apiPackage": "cn.com.bsfit.optimizer.mgr.controller.api",
-  "dateLibrary": "legacy",
-  "hideGenerationTimestamp": true,
-  "useTags": true
-}
